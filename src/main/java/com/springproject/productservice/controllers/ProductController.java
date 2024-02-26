@@ -1,5 +1,6 @@
 package com.springproject.productservice.controllers;
 
+import com.springproject.productservice.Exception.ProductNotExistsException;
 import com.springproject.productservice.Service.FakeStoreProductService;
 import com.springproject.productservice.models.Product;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +22,7 @@ public class ProductController {
         return fakeStoreProductService.getAllProduct();
     }
     @GetMapping("/{id}")
-    public Product getSingleProduct(@PathVariable("id") Long id){
+    public Product getSingleProduct(@PathVariable("id") Long id) throws ProductNotExistsException {
         return fakeStoreProductService.getSingleProduct(id);
     }
     @PostMapping()

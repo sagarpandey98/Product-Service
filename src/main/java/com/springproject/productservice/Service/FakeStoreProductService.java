@@ -1,5 +1,6 @@
 package com.springproject.productservice.Service;
 
+import com.springproject.productservice.Exception.ProductNotExistsException;
 import com.springproject.productservice.dtos.FakeStoreProductDto;
 import com.springproject.productservice.models.Category;
 import com.springproject.productservice.models.Product;
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 @Getter
 @Setter
@@ -43,10 +45,12 @@ public class FakeStoreProductService implements ProductService{
     }
 
     @Override
-    public Product getSingleProduct(Long id) {
+    public Product getSingleProduct(Long id) throws ProductNotExistsException {
         FakeStoreProductDto fakeStoreProduct = restTemplate.getForObject("https://fakestoreapi.com/products/" + id, FakeStoreProductDto.class);
-        if(fakeStoreProduct != null) return convertFakeStoreProductToProduct(fakeStoreProduct);
-        else return null;
+        if(fakeStoreProduct==null){
+            throw new ProductNotExistsException("Product with id: " + id + " does not exists");
+        }
+        return convertFakeStoreProductToProduct(fakeStoreProduct);
 
     }
 
@@ -63,5 +67,17 @@ public class FakeStoreProductService implements ProductService{
     @Override
     public Product deleteProduct(Long id) {
         return null;
+    }
+
+    @Override
+    public List<Category> getAllCategory() {
+        String[] categoriesArray = restTemplate.getForObject("https://fakestoreapi.com/products/categories", String[].class);
+        List<Category> categoriesList = new ArrayList<>();
+        for(String str: categoriesArray){
+            Category temp = new Category();
+            temp.setName(str);
+            categoriesList.add(temp);
+        }
+        return categoriesList;
     }
 }

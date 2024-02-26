@@ -20,13 +20,8 @@ public class CategoryController {
     public CategoryController(FakeStoreProductService fakeStoreProductService){
         this.fakeStoreProductService = fakeStoreProductService;
     }
-    @GetMapping()
+    @GetMapping("/all")
     public List<Category> getAllCategory(){
-        return null;
+        return fakeStoreProductService.getAllCategory();
     }
-    @GetMapping("/{name}")
-    public Category getAllCategory(@PathVariable("name") String name){
-        return null;
-    }
-
 }
