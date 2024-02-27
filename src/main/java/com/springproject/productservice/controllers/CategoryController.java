@@ -1,6 +1,7 @@
 package com.springproject.productservice.controllers;
 
 import com.springproject.productservice.Service.FakeStoreProductService;
+import com.springproject.productservice.Service.ProductService;
 import com.springproject.productservice.dtos.FakeStoreProductDto;
 import com.springproject.productservice.models.Category;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +16,7 @@ import java.util.List;
 @RequestMapping("/products/category")
 
 public class CategoryController {
-    FakeStoreProductService fakeStoreProductService;
+    ProductService fakeStoreProductService;
     @Autowired
     public CategoryController(FakeStoreProductService fakeStoreProductService){
         this.fakeStoreProductService = fakeStoreProductService;

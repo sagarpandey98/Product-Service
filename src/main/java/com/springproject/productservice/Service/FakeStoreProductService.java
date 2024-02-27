@@ -15,7 +15,7 @@ import java.util.Arrays;
 import java.util.List;
 @Getter
 @Setter
-@Service
+@Service("fakeStoreProductService")
 public class FakeStoreProductService implements ProductService{
     private RestTemplate restTemplate;
     @Autowired

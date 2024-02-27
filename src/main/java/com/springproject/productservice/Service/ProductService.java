@@ -2,8 +2,9 @@ package com.springproject.productservice.Service;
 import com.springproject.productservice.Exception.ProductNotExistsException;
 import com.springproject.productservice.models.Category;
 import com.springproject.productservice.models.Product;
-import java.util.List;
+import org.springframework.stereotype.Service;
 
+import java.util.List;
 public interface ProductService {
     public List<Product> getAllProduct();
     public Product getSingleProduct(Long id) throws ProductNotExistsException;

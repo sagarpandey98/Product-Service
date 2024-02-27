@@ -2,8 +2,10 @@ package com.springproject.productservice.controllers;
 
 import com.springproject.productservice.Exception.ProductNotExistsException;
 import com.springproject.productservice.Service.FakeStoreProductService;
+import com.springproject.productservice.Service.ProductService;
 import com.springproject.productservice.models.Product;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -12,18 +14,18 @@ import java.util.List;
 @RequestMapping("/products")
 
 public class ProductController {
-    FakeStoreProductService fakeStoreProductService;
+    ProductService productService;
     @Autowired
-    public ProductController(FakeStoreProductService fakeStoreProductService){
-        this.fakeStoreProductService = fakeStoreProductService;
+    public ProductController(@Qualifier("dbIntegratedProductService") ProductService productService){
+        this.productService = productService;
     }
     @GetMapping
     public List<Product> getAllProduct(){
-        return fakeStoreProductService.getAllProduct();
+        return productService.getAllProduct();
     }
     @GetMapping("/{id}")
     public Product getSingleProduct(@PathVariable("id") Long id) throws ProductNotExistsException {
-        return fakeStoreProductService.getSingleProduct(id);
+        return productService.getSingleProduct(id);
     }
     @PostMapping()
     public Product addNewProduct(@RequestBody Product product){
