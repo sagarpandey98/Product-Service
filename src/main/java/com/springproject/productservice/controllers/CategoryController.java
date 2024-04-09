@@ -1,10 +1,11 @@
 package com.springproject.productservice.controllers;
-
-import com.springproject.productservice.Service.FakeStoreProductService;
+import com.springproject.productservice.Exception.CategoryNotExistException;
 import com.springproject.productservice.Service.ProductService;
-import com.springproject.productservice.dtos.FakeStoreProductDto;
-import com.springproject.productservice.models.Category;
+import com.springproject.productservice.models.Product;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,13 +17,18 @@ import java.util.List;
 @RequestMapping("/products/category")
 
 public class CategoryController {
-    ProductService fakeStoreProductService;
+    ProductService productService;
     @Autowired
-    public CategoryController(FakeStoreProductService fakeStoreProductService){
-        this.fakeStoreProductService = fakeStoreProductService;
+    public CategoryController(@Qualifier("ProductServiceDatabaseIntegrated") ProductService productService){
+        this.productService = productService;
     }
-    @GetMapping("/all")
-    public List<Category> getAllCategory(){
-        return fakeStoreProductService.getAllCategory();
+    @GetMapping
+    public List<String> getAllCategory() throws CategoryNotExistException {
+        return productService.getAllCategories();
+    }
+    @GetMapping("/{category}")
+    public ResponseEntity<List<Product>> getInCategory(@PathVariable("category") String category) throws CategoryNotExistException {
+        List<Product> products = productService.getInCategory(category);
+        return new ResponseEntity<>(products, HttpStatus.OK);
     }
 }

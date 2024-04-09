@@ -1,6 +1,7 @@
 package com.springproject.productservice.controlleradvices;
 
-import com.springproject.productservice.Exception.ProductNotExistsException;
+import com.springproject.productservice.Exception.ProductNotExistException;
+import com.springproject.productservice.Exception.ProductNotSavedException;
 import com.springproject.productservice.dtos.ArithmeticExceptionDTO;
 import com.springproject.productservice.dtos.ExceptionDto;
 import org.springframework.http.HttpStatus;
@@ -17,8 +18,8 @@ public class ExceptionHandler {
         return new ResponseEntity<>(arithmeticExceptionDTO, HttpStatus.OK);
     }
 
-    @org.springframework.web.bind.annotation.ExceptionHandler(ProductNotExistsException.class)
-    public ResponseEntity<ExceptionDto> handleProductNotExistException(ProductNotExistsException exception){
+    @org.springframework.web.bind.annotation.ExceptionHandler(ProductNotExistException.class)
+    public ResponseEntity<ExceptionDto> handleProductNotExistException(ProductNotExistException exception){
         ExceptionDto exceptionDto = new ExceptionDto();
         exceptionDto.setMessage(exception.getMessage());
         return new ResponseEntity<>(exceptionDto, HttpStatus.OK);

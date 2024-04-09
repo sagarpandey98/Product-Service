@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f9bc177c-84b1-4f2d-bbac-2abb19c5fdda" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.jpb/jpb-settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HELP.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/Exception/CategoryNotExistException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/Exception/CrudOperationException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/Exception/ProductNotSavedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/Service/ProductServiceDatabaseIntegrated.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V1__init.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/springproject/productservice/controllers/ProductControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/springproject/productservice/ProductserviceApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/springproject/productservice/Service/FakeStoreProductService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/springproject/productservice/Service/ProductService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/springproject/productservice/configuration/ApplicationConfiguration.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/springproject/productservice/controlleradvices/ExceptionHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/springproject/productservice/controllers/CategoryController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/springproject/productservice/controllers/ProductController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/springproject/productservice/dtos/ArithmeticExceptionDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/springproject/productservice/dtos/ExceptionDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/springproject/productservice/dtos/FakeStoreProductDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/springproject/productservice/models/BaseModel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/springproject/productservice/models/Category.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/springproject/productservice/models/Product.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/springproject/productservice/repositories/CategoryRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/springproject/productservice/repositories/ProductRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/Exception/ProductNotExistsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/Exception/ProductNotExistException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/Inheritence/jointable/Instructor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/Inheritence/jointable/Mentor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/Inheritence/jointable/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/Inheritence/mappedsuperclass/Instructor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/Inheritence/mappedsuperclass/Mentor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/Inheritence/mappedsuperclass/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/Inheritence/read_me" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/Inheritence/singleclass/Instructor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/Inheritence/singleclass/Mentor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/Inheritence/singleclass/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/Inheritence/tableperclass/Instructor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/Inheritence/tableperclass/Mentor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/Inheritence/tableperclass/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/ProductserviceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/ProductserviceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/Service/FakeStoreProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/Service/FakeStoreProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/Service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/Service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/Service/dbIntegratedProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/controlleradvices/ExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/controlleradvices/ExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/controllers/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/controllers/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/controllers/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/models/BaseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/models/BaseModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/models/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/repositories/CategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/repositories/CategoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/repositories/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/repositories/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/springproject/productservice/ProductserviceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/springproject/productservice/ProductServiceApplicationTests.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="com.haulmont.jpb.FlywayMigrationScript" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
+    <option name="isSearchInLibrariesForStructure" value="false" />
+  </component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2boTjk0NqqSBwqmg0o5hMRb7MJP" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.ProductserviceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/AS/Desktop/CODE/JAVA/Projects/productservice&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.springproject.productservice.DTO" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\AS\Desktop\CODE\JAVA\Projects\productservice\src\main\java\com\springproject\productservice\Inheritence\tableperclass" />
+      <recent name="C:\Users\AS\Desktop\CODE\JAVA\Projects\productservice\src\main\java\com\springproject\productservice\Inheritence\singleclass" />
+      <recent name="C:\Users\AS\Desktop\CODE\JAVA\Projects\productservice\src\main\java\com\springproject\productservice\Inheritence\jointable" />
+      <recent name="C:\Users\AS\Desktop\CODE\JAVA\Projects\productservice\src\main\java\com\springproject\productservice\Inheritence\mappedsuperclass" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\AS\Desktop\CODE\JAVA\Projects\productservice\src\main\java\com\springproject\productservice\Inheritence" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.springproject.productservice.controllers" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="ProductserviceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="productservice" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.springproject.productservice.ProductserviceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f9bc177c-84b1-4f2d-bbac-2abb19c5fdda" name="Changes" comment="" />
+      <created>1706880571834</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1706880571834</updated>
+      <workItem from="1706880573377" duration="19734000" />
+      <workItem from="1707001078726" duration="10704000" />
+      <workItem from="1707067916851" duration="1389000" />
+      <workItem from="1708007146018" duration="5881000" />
+      <workItem from="1708964681026" duration="25031000" />
+      <workItem from="1709055938537" duration="1215000" />
+      <workItem from="1709973845438" duration="3797000" />
+      <workItem from="1710146633439" duration="22783000" />
+      <workItem from="1710320108889" duration="12579000" />
+      <workItem from="1710373982671" duration="9165000" />
+      <workItem from="1711983401913" duration="5453000" />
+      <workItem from="1712207010453" duration="37565000" />
+      <workItem from="1712632457415" duration="58000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/springproject/productservice/Service/ProductService.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/springproject/productservice/controllers/ProductController.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
