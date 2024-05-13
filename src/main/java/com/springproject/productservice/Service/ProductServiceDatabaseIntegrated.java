@@ -1,33 +1,44 @@
 package com.springproject.productservice.Service;
-
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.springproject.productservice.Exception.CategoryNotExistException;
+import com.springproject.productservice.Exception.CrudOperationException;
 import com.springproject.productservice.Exception.ProductNotExistException;
+import com.springproject.productservice.dtos.SendEmailEventDto;
 import com.springproject.productservice.models.Category;
 import com.springproject.productservice.models.Product;
 import com.springproject.productservice.repositories.CategoryRepository;
 import com.springproject.productservice.repositories.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
-
 @Service("ProductServiceDatabaseIntegrated")
 
 public class ProductServiceDatabaseIntegrated implements ProductService{
     private final RedisTemplate<String, Object> redisTemplate;
     private final ProductRepository productRepository;
     private final CategoryRepository categoryRepository;
+    private final KafkaTemplate kafkaTemplate;
+    private final ObjectMapper objectMapper;
+
     @Autowired
     public ProductServiceDatabaseIntegrated (ProductRepository productRepository,
                                              CategoryRepository categoryRepository,
-                                             RedisTemplate<String, Object> redisTemplate){
+                                             RedisTemplate<String, Object> redisTemplate, KafkaTemplate kafkaTemplate, ObjectMapper objectMapper){
         this.productRepository = productRepository;
         this.categoryRepository = categoryRepository;
         this.redisTemplate = redisTemplate;
+        this.kafkaTemplate = kafkaTemplate;
+        this.objectMapper = objectMapper;
         Objects.requireNonNull(this.redisTemplate.getConnectionFactory()).getConnection().flushAll();
 
     }
@@ -83,22 +94,46 @@ public class ProductServiceDatabaseIntegrated implements ProductService{
         }
     }
 
+
     @Override
-    public Product addNewProduct(Product product) {
-        Category category = product.getCategory();
-        Optional<Category> optionalCategory = categoryRepository.findByName(category.getName());
-        if(optionalCategory.isEmpty()){
-            category.setCreatedAt(LocalDateTime.now());
-            category.setLastUpdatedAt(LocalDateTime.now());
-            categoryRepository.save(category);
+    public Product addNewProduct(Product product) throws JsonProcessingException, CrudOperationException {
+        Category category = createCategory(product.getCategory());
+        product.setCategory(category);
+
+        // Check if product already exists
+        Optional<Product> existingProduct = productRepository.findByTitle(product.getTitle());
+        if (existingProduct.isPresent()) {
+            throw new CrudOperationException("Product with title " + product.getTitle() + " already exists");
         }
-        else{
-            product.setCategory(optionalCategory.get());
-        }
+
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        Jwt jwt = (Jwt) authentication.getPrincipal();
+        String to = (String) jwt.getClaims().get("mail");
+
         product.setCreatedAt(LocalDateTime.now());
         product.setLastUpdatedAt(LocalDateTime.now());
-        return productRepository.save(product);
 
+        // Save product and handle any exceptions
+        try {
+            product = productRepository.save(product);
+        } catch (Exception e) {
+            throw new RuntimeException("Error saving product: " + e.getMessage(), e);
+        }
+
+        SendEmailEventDto sendEmailEventDto = new SendEmailEventDto();
+        sendEmailEventDto.setTo(to);
+        sendEmailEventDto.setFrom("sagarbvmdelhi@gmail.com");
+        sendEmailEventDto.setSubject("Welcome to UserProductNexus");
+        sendEmailEventDto.setBody("Welcome to UserProductNexus. Product with title: " + product.getTitle() + " has been added to our catalog");
+
+        // Send email and handle any exceptions
+        try {
+            kafkaTemplate.send("sendEmail", objectMapper.writeValueAsString(sendEmailEventDto));
+        } catch (Exception e) {
+            throw new RuntimeException("Error sending email: " + e.getMessage(), e);
+        }
+
+        return product;
     }
 
     @Override
@@ -167,6 +202,41 @@ public class ProductServiceDatabaseIntegrated implements ProductService{
         }
         Product product = optionalProduct.get();
         product.setDeleted(true);
-        return productRepository.save(product);
+        try {
+            product = productRepository.save(product);
+        } catch (Exception e) {
+            throw new RuntimeException("Error saving product: " + e.getMessage(), e);
+        }
+
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        Jwt jwt = (Jwt) authentication.getPrincipal();
+        String to = (String) jwt.getClaims().get("mail");
+
+        SendEmailEventDto sendEmailEventDto = new SendEmailEventDto();
+        sendEmailEventDto.setTo(to);
+        sendEmailEventDto.setFrom("sagarbvmdelhi@gmail.com");
+        sendEmailEventDto.setSubject("Welcome to UserProductNexus");
+        sendEmailEventDto.setBody("Welcome to UserProductNexus. Product with title: " + product.getTitle() + " has been added to our catalog");
+
+        // Send email and handle any exceptions
+        try {
+            kafkaTemplate.send("sendEmail", objectMapper.writeValueAsString(sendEmailEventDto));
+        } catch (Exception e) {
+            throw new RuntimeException("Error sending email: " + e.getMessage(), e);
+        }
+
+        return product;
+    }
+
+    private Category createCategory(Category category) {
+        Optional<Category> optionalCategory = categoryRepository.findByName(category.getName());
+        if (optionalCategory.isEmpty()) {
+            category.setCreatedAt(LocalDateTime.now());
+            category.setLastUpdatedAt(LocalDateTime.now());
+            category = categoryRepository.save(category);
+        } else {
+            category = optionalCategory.get();
+        }
+        return category;
     }
 }

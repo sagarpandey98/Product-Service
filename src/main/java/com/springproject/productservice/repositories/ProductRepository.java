@@ -20,4 +20,6 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
     @NonNull
     List<Product> findAll();
     List<Product> findByCategory_Name(String category);
+
+    Optional<Product> findByTitle(String title);
 }

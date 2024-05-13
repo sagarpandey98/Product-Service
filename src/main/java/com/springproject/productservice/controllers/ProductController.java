@@ -1,4 +1,5 @@
 package com.springproject.productservice.controllers;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.springproject.productservice.Exception.CrudOperationException;
 import com.springproject.productservice.Exception.ProductNotExistException;
 import com.springproject.productservice.Exception.ProductNotSavedException;
@@ -38,7 +39,7 @@ public class ProductController {
         return new ResponseEntity<>(productService.getSingleProduct(id), HttpStatus.OK);
     }
     @PostMapping()
-    public ResponseEntity<Product> addNewProduct(@RequestBody Product product) throws CrudOperationException {
+    public ResponseEntity<Product> addNewProduct(@RequestBody Product product) throws CrudOperationException, JsonProcessingException {
         return new ResponseEntity<>(productService.addNewProduct(product), HttpStatus.OK);
     }
     @PatchMapping("/{id}")
