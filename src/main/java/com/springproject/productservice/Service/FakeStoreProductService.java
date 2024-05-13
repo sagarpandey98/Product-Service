@@ -170,7 +170,7 @@ public class FakeStoreProductService implements ProductService{
     }
 
     @Override
-    public Product deleteProduct(Long id) throws CrudOperationException {
+    public Product deleteProduct(Long id) throws ProductNotExistException {
         RequestCallback requestCallback = restTemplate.httpEntityCallback(new FakeStoreProductDto(),
                                                                             FakeStoreProductDto.class);
         HttpMessageConverterExtractor<FakeStoreProductDto> responseExtractor =
@@ -178,7 +178,7 @@ public class FakeStoreProductService implements ProductService{
         FakeStoreProductDto response = restTemplate.execute("https://fakestoreapi.com/products/" + id,
                                                             HttpMethod.DELETE, requestCallback, responseExtractor);
         if(response == null){
-            throw new CrudOperationException("operation to delete the product has failed");
+            throw new ProductNotExistException("operation to delete the product has failed");
         }
         return convertFakeStoreProductToProduct(response);
     }

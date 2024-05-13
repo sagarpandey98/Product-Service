@@ -7,16 +7,18 @@ import jakarta.persistence.MappedSuperclass;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.io.Serializable;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Getter
 @Setter
 @MappedSuperclass
-public class BaseModel {
+public class BaseModel implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
-    private Date createdAt;
-    private Date lastUpdatedAt;
+    private LocalDateTime createdAt;
+    private LocalDateTime lastUpdatedAt;
     private boolean isDeleted;
 }

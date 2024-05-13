@@ -5,69 +5,60 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f9bc177c-84b1-4f2d-bbac-2abb19c5fdda" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.jpb/jpb-settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HELP.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/Exception/CategoryNotExistException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/Exception/CrudOperationException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/Exception/ProductNotSavedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/Service/ProductServiceDatabaseIntegrated.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V1__init.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/springproject/productservice/controllers/ProductControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/springproject/productservice/ProductserviceApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/springproject/productservice/Service/FakeStoreProductService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/springproject/productservice/Service/ProductService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/springproject/productservice/configuration/ApplicationConfiguration.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/springproject/productservice/controlleradvices/ExceptionHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/springproject/productservice/controllers/CategoryController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/springproject/productservice/controllers/ProductController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/springproject/productservice/dtos/ArithmeticExceptionDTO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/springproject/productservice/dtos/ExceptionDto.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/springproject/productservice/dtos/FakeStoreProductDto.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/springproject/productservice/models/BaseModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/springproject/productservice/models/Category.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/springproject/productservice/models/Product.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/springproject/productservice/repositories/CategoryRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/springproject/productservice/repositories/ProductRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/Exception/TokenAuthenticationFailedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/commons/AuthenticationCommons.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/configuration/RedisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/dtos/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/dtos/UserDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/security/SpringSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/30a13078-2252-458e-b26c-caf7f47dbf6e/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/30a13078-2252-458e-b26c-caf7f47dbf6e/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/30a13078-2252-458e-b26c-caf7f47dbf6e/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/30a13078-2252-458e-b26c-caf7f47dbf6e/storage_v2/_src_/schema/productservicedb.5Ek1jA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9a109b71-69f6-457a-8a59-8ac56ec9f78c.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9a109b71-69f6-457a-8a59-8ac56ec9f78c/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9a109b71-69f6-457a-8a59-8ac56ec9f78c/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9a109b71-69f6-457a-8a59-8ac56ec9f78c/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9a109b71-69f6-457a-8a59-8ac56ec9f78c/storage_v2/_src_/schema/productservice.5l4RCw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9a109b71-69f6-457a-8a59-8ac56ec9f78c/storage_v2/_src_/schema/productservicedb.5Ek1jA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/Exception/ProductNotExistsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/Exception/ProductNotExistException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/Inheritence/jointable/Instructor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/Inheritence/jointable/Mentor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/Inheritence/jointable/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/Inheritence/mappedsuperclass/Instructor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/Inheritence/mappedsuperclass/Mentor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/Inheritence/mappedsuperclass/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/Inheritence/read_me" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/Inheritence/singleclass/Instructor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/Inheritence/singleclass/Mentor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/Inheritence/singleclass/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/Inheritence/tableperclass/Instructor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/Inheritence/tableperclass/Mentor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/Inheritence/tableperclass/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/ProductserviceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/ProductserviceApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/Service/FakeStoreProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/Service/FakeStoreProductService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/Service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/Service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/Service/dbIntegratedProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/Service/ProductServiceDatabaseIntegrated.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/Service/ProductServiceDatabaseIntegrated.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/controlleradvices/ExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/controlleradvices/ExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/controllers/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/controllers/CategoryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/controllers/ProductController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/models/BaseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/models/BaseModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/models/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/models/Category.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/models/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/repositories/CategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/repositories/CategoryRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/repositories/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springproject/productservice/repositories/ProductRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/springproject/productservice/ProductserviceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/springproject/productservice/ProductServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/springproject/productservice/ProductServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/springproject/productservice/ProductServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/springproject/productservice/controllers/ProductControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springproject/productservice/Exception/CategoryNotExistException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springproject/productservice/Exception/CrudOperationException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springproject/productservice/Exception/ProductNotExistException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springproject/productservice/Exception/ProductNotSavedException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springproject/productservice/ProductserviceApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springproject/productservice/Service/FakeStoreProductService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springproject/productservice/Service/ProductService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springproject/productservice/Service/ProductServiceDatabaseIntegrated.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springproject/productservice/configuration/ApplicationConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springproject/productservice/controlleradvices/ExceptionHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springproject/productservice/controllers/CategoryController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springproject/productservice/controllers/ProductController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springproject/productservice/dtos/ArithmeticExceptionDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springproject/productservice/dtos/ExceptionDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springproject/productservice/dtos/FakeStoreProductDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springproject/productservice/models/BaseModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springproject/productservice/models/Category.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springproject/productservice/models/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springproject/productservice/repositories/CategoryRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springproject/productservice/repositories/ProductRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/migration/V1__init.sql" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,9 +69,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="com.haulmont.jpb.FlywayMigrationScript" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -113,39 +104,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.ProductserviceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/AS/Desktop/CODE/JAVA/Projects/productservice&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.productservice [package].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.ProductserviceApplication.executor": "Run",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/AS/Desktop/CODE/JAVA/Projects/productservice/src/main/java/com/springproject/productservice/dtos",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editor.preferences.import",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql",
+      "redis"
     ]
   }
-}</component>
+}]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.springproject.productservice.DTO" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\AS\Desktop\CODE\JAVA\Projects\productservice\src\main\java\com\springproject\productservice\dtos" />
       <recent name="C:\Users\AS\Desktop\CODE\JAVA\Projects\productservice\src\main\java\com\springproject\productservice\Inheritence\tableperclass" />
       <recent name="C:\Users\AS\Desktop\CODE\JAVA\Projects\productservice\src\main\java\com\springproject\productservice\Inheritence\singleclass" />
       <recent name="C:\Users\AS\Desktop\CODE\JAVA\Projects\productservice\src\main\java\com\springproject\productservice\Inheritence\jointable" />
@@ -163,6 +161,12 @@
   </component>
   <component name="RunManager">
     <configuration name="ProductserviceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <envs>
+        <env name="DB_URL" value="jdbc:mysql://${MYSQL_HOST:localhost}:3306/productservicedb" />
+        <env name="DB_USERNAME" value="root" />
+        <env name="DB_PASSWORD" value="123456" />
+        <env name="DB_ISSUER_URI" value="http://localhost:8181" />
+      </envs>
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="productservice" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.springproject.productservice.ProductserviceApplication" />
@@ -191,7 +195,13 @@
       <workItem from="1710373982671" duration="9165000" />
       <workItem from="1711983401913" duration="5453000" />
       <workItem from="1712207010453" duration="37565000" />
-      <workItem from="1712632457415" duration="58000" />
+      <workItem from="1712632457415" duration="9220000" />
+      <workItem from="1712747614023" duration="602000" />
+      <workItem from="1712891378551" duration="13989000" />
+      <workItem from="1713006474191" duration="6949000" />
+      <workItem from="1713668805456" duration="8543000" />
+      <workItem from="1714279122654" duration="89000" />
+      <workItem from="1714279257011" duration="77078000" />
     </task>
     <servers />
   </component>
@@ -226,13 +236,17 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/springproject/productservice/Service/ProductService.java</url>
-          <line>9</line>
+          <line>8</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/springproject/productservice/controllers/ProductController.java</url>
-          <line>36</line>
-          <option name="timeStamp" value="3" />
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/springproject/productservice/Service/ProductServiceDatabaseIntegrated.java</url>
+          <line>45</line>
+          <properties class="com.springproject.productservice.Service.ProductServiceDatabaseIntegrated" method="getSingleProduct">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

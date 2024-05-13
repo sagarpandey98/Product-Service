@@ -2,6 +2,7 @@ package com.springproject.productservice.controlleradvices;
 
 import com.springproject.productservice.Exception.ProductNotExistException;
 import com.springproject.productservice.Exception.ProductNotSavedException;
+import com.springproject.productservice.Exception.TokenAuthenticationFailedException;
 import com.springproject.productservice.dtos.ArithmeticExceptionDTO;
 import com.springproject.productservice.dtos.ExceptionDto;
 import org.springframework.http.HttpStatus;
@@ -23,5 +24,12 @@ public class ExceptionHandler {
         ExceptionDto exceptionDto = new ExceptionDto();
         exceptionDto.setMessage(exception.getMessage());
         return new ResponseEntity<>(exceptionDto, HttpStatus.OK);
+    }
+    @org.springframework.web.bind.annotation.ExceptionHandler(TokenAuthenticationFailedException.class)
+    public ResponseEntity<ExceptionDto> handleTokenAuthenticationFailedException
+            (TokenAuthenticationFailedException exception){
+         ExceptionDto exceptionDto = new ExceptionDto();
+         exceptionDto.setMessage(exception.getMessage());
+         return new ResponseEntity<>(exceptionDto, HttpStatus.UNAUTHORIZED);
     }
 }
